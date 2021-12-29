@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+    //templates are also called parameterized class
+    //to follow principles of DRY coding, use templates
+
 template<class T1, class T2>
 class myClass{
     public:
