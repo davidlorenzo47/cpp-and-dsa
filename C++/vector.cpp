@@ -39,7 +39,7 @@ int main() {
     {
         if (vec[i] == 0)
         {
-            vec.insert(vec.begin() + (i+1), 0);
+            vec.insert(vec.begin() + (i+1), 0); //to insert at specific position a particualr value
         }
         
     }
