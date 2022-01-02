@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+
+//class is like a custom data type.
 class Employee
 {
     private:
