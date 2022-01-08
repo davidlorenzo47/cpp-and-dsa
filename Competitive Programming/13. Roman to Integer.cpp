@@ -27,24 +27,20 @@ void vecip(vector<T> &v) {
     }
 }
 
-int tribonacci(int n) {
-    int ans = 0;
-    if (n <= 0)
-    {
-        return n;
-    }
-    if (n == 2)
-    {
-        return 1;
-    }
+int romanToInt(string s) {
+    unordered_map<char, int> myMap = {{'M', 1000}, {'D', 500}, {'C', 100}, {'L', 50}, {'X', 10}, {'V', 5}, {'I', 1}};
 
-    int n1 = 0, n2 = 1, n3 = 1;
-    for (int i = 3; i <= n; i++)
+    int ans = myMap[s.back()];
+    for (int i = 0; i < s.length() - 1; i++)
     {
-        ans = n1 + n2 + n3;
-        n1 = n2;
-        n2 = n3;
-        n3 = ans;
+        if (myMap[s[i]] < myMap[s[i + 1]])
+        {
+            ans = ans - myMap[s[i]];    // for IV; I < V, so 5 - 1;
+        }
+        else
+        {
+            ans = ans + myMap[s[i]];
+        }       
     }
     return ans;
 }
@@ -56,9 +52,11 @@ int main() {
     // vecip(numbers);
     // display(numbers);
 
-    int n;
-    cin>>n;
-    cout<<tribonacci(n);
+    string s;
+    cout<<"Enter the stirng: ";
+    cin>>s;
+
+    cout<<romanToInt(s);
 
     return 0;
 }

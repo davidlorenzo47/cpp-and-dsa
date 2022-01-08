@@ -14,25 +14,12 @@ void display(vector<string> &v) {
 
 int main() {
 
-    string address;
+    string str, substr;
 
-    cout<<"Enter the address:";
-    cin>>address;
+    cin>>str;
+    cin>>substr;
 
-    vector<string> add(address.size()); 
-    copy(address.begin(), address.end(), add.begin());
-
-    for (int i = 0; i < address.size(); i++)
-    {
-        if (add[i] == ".")
-        {
-            add.insert(add.begin() + (i), 0);
-            // address.insert(i+1, 1, '.');
-            // address.insert(i+2, 1, ']');
-        }
-    }
-
-        display(add);
+    
     
     return 0;
 }

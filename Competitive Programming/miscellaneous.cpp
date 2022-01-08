@@ -9,8 +9,16 @@
      both the above for loops are same
 */
 
-//123 % 10 = 3; 1230 % 10 = 0
-//123 / 10 = 12
+/*
+123 % 10 = 3; 1230 % 10 = 0
+123 / 10 = 12
+
+% gives remainder.
+to check if a number is divisible by given number use %.
+eg. to check if 15 is divisible by 3.
+    15 % 3 = 0
+    remainder = 0. Hence, 15 is divisible by 3.
+*/
 
 /*  Converting int n to vector res:
     int n;
@@ -43,4 +51,9 @@
 
     string res;
     res.resize(command.size());
+*/
+
+/*
+map             complexity: log(n)
+unordered map   complexity: O(1)
 */
