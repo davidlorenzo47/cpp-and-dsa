@@ -28,6 +28,7 @@ int main() {
     }
 
     //vec.pop_back();   deletes the element at the end of vector
+    // vec.erase(vec.begin() + 1);  //Deletes the second element
 
     display(vec);
 

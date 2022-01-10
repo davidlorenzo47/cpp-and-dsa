@@ -57,3 +57,5 @@ eg. to check if 15 is divisible by 3.
 map             complexity: log(n)
 unordered map   complexity: O(1)
 */
+
+//functions inside class are known as methods 
