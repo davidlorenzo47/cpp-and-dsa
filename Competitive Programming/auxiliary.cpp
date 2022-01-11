@@ -26,51 +26,34 @@ void vecip(vector<T> &v) {
         v.push_back(elements);
     }
 }
-
-int calPoints(vector<string>& ops) {
-
-    int val1 = 0, val2 = 0, ans = 0;
-    stack<int> mstk;
-
-    for (string i:ops)
+     
+int numberOfSteps(int num) {
+    
+    int steps = 0;
+    while (num != 0)
     {
-        if (i == "C")
+        if (num % 2 == 0)
         {
-            mstk.pop();
-        }
-        else if(i == "D")
-        {
-            mstk.push(mstk.top()*2);
-        }
-        else if (i == "+")
-        {
-            val1 = mstk.top();
-            mstk.pop();
-            val2 = mstk.top();
-            mstk.push(val1);
-            mstk.push(val1 + val2);
+            num = num / 2;
+            steps++;
         }
         else
         {
-            mstk.push(stoi(i));
+            num = num - 1;
+            steps++;
         }
     }
-    while (mstk.size() != 0)
-    {
-        ans = ans + mstk.top();
-        mstk.pop();
-    }
-    return ans;    
+    return steps;
 }
 
-int main() {
+int main() {    
 
-    vector<string> ops;
+    int num;
 
-    vecip(ops);
-    display(ops);
+    cout<<"Entnter the number: ";
+    cin>>num;
 
-    cout<<calPoints(ops);
+    cout<<numberOfSteps(num);
 
     return 0;
 }

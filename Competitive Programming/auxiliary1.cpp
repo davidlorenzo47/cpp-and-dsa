@@ -9,17 +9,13 @@ void display(vector<string> &v) {
         //cout<<v.at(i)<<" ";
     }
     cout<<endl;
-    
 }
 
 int main() {
 
-    string str, substr;
-
-    cin>>str;
-    cin>>substr;
-
-    
+    int num;
+    cin>>num;
+    cout<<num%2;
     
     return 0;
 }
