@@ -3,6 +3,24 @@ using namespace std;
 
 int main() {
 
+    /*
+    *****************************************User defined array input********************************************************
+    int size;
+    cout<<"Enter the size of the array: ";
+    cin>>size;
+    int array[size];
+    cout<<"Enter the elements of the array: ";
+    for (int i = 0; i < size; i++)
+    {
+        cin>>array[i];
+    }
+    cout<<"User defined input array is: ";
+    for (int i = 0; i < size; i++)
+    {
+        cout<<array[i]<<" ";
+    }
+    */
+
     int size;
     int *ptr;
 

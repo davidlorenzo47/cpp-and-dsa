@@ -2,7 +2,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void display(vector<string> &v) {
+template <class T>
+void display(vector<T> &v) {
     for (int i = 0; i < v.size(); i++)
     {
         cout<<v[i]<<" ";

@@ -42,7 +42,7 @@ int main() {
     //     cout<<myArr[i]<<" ";
     // }
     
-    //  pointers with array
+    //  ***************************************pointers with array***********************************************************
 
     int thearray[] = {20, 40, 60, 80};
     int* p = thearray;  //p is pointer to array

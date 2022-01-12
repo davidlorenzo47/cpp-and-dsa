@@ -16,7 +16,7 @@ template <class T>
 void vecip(vector<T> &v) {
 
     int size;
-    string elements;
+    int elements;
     cout<<"Enter the size of the array: ";
     cin>>size;
     for (int i = 0; i < size; i++)
@@ -26,34 +26,35 @@ void vecip(vector<T> &v) {
         v.push_back(elements);
     }
 }
-     
-int numberOfSteps(int num) {
+
+int numMatchingSubseq(string s, vector<string>& words) {
     
-    int steps = 0;
-    while (num != 0)
+    int ans = 0;
+    string sub;
+    for (int i = 0; i < words.size(); i++)
     {
-        if (num % 2 == 0)
+        sub = words[i];
+        for (int j = 0; i < sub.length(); i++)
         {
-            num = num / 2;
-            steps++;
+            
         }
-        else
-        {
-            num = num - 1;
-            steps++;
-        }
+        
     }
-    return steps;
+    
 }
+
 
 int main() {    
 
-    int num;
+    vector<string> words;
+    vecip(words);
+    display(words);
 
-    cout<<"Entnter the number: ";
-    cin>>num;
+    string s;
+    cout<<"Enter the string s: ";
+    cin>>s;
 
-    cout<<numberOfSteps(num);
+    cout<<numMatchingSubseq(s, words);
 
     return 0;
 }
