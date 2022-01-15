@@ -27,34 +27,36 @@ void vecip(vector<T> &v) {
     }
 }
 
-int numMatchingSubseq(string s, vector<string>& words) {
-    
-    int ans = 0;
-    string sub;
-    for (int i = 0; i < words.size(); i++)
-    {
-        sub = words[i];
-        for (int j = 0; i < sub.length(); i++)
-        {
-            
-        }
-        
-    }
-    
-}
+vector<int> minOperations(string boxes) {
 
+    vector<int> ans;
+    int temp = 0;
+
+    for (int i = 0; i < boxes.length(); i++)
+    {
+        for (int n = 0; n < boxes.length(); n++)
+        {
+            if (boxes[n] == '1')
+            {
+                temp  = temp + abs(i - n);
+            }
+        }
+        ans.push_back(temp);
+        temp = 0;
+    }
+    return ans;    
+}
 
 int main() {    
 
-    vector<string> words;
-    vecip(words);
-    display(words);
+    string boxes;
+    cout<<"Enter the stirng: ";
+    cin>>boxes;
 
-    string s;
-    cout<<"Enter the string s: ";
-    cin>>s;
+    vector<int> ans;
+    ans = minOperations(boxes);
 
-    cout<<numMatchingSubseq(s, words);
+    display(ans);   
 
     return 0;
 }

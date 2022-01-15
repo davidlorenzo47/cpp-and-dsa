@@ -7,6 +7,26 @@ using namespace std;
 
 int main() {
 
+    /*
+    ************************************Counting Frequency of Vector elements using map***********************************************
+    vector<int> vec;
+
+    vecip(vec);
+    display(vec); 
+
+    map<int, int> mp;
+
+    for (auto x:vec)
+    {
+        mp[x]++;    //putting elements in map
+    }
+
+    for (auto i:mp) //check if frequency is one.
+    {
+        cout<<i.second<<" ";    //if frequency is one then add that element to sum.
+    }
+    */
+
     map<string, int> marks;
 
     marks["David"] = 90;
