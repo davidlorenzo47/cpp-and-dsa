@@ -27,36 +27,28 @@ void vecip(vector<T> &v) {
     }
 }
 
-vector<int> minOperations(string boxes) {
-
-    vector<int> ans;
-    int temp = 0;
-
-    for (int i = 0; i < boxes.length(); i++)
+int thirdMax(vector<int>& nums) {
+    sort(nums.begin(), nums.end() );
+    nums.erase( unique( nums.begin(), nums.end() ), nums.end() );
+    
+    if (nums.size() == 1 || nums.size() == 2)
     {
-        for (int n = 0; n < boxes.length(); n++)
-        {
-            if (boxes[n] == '1')
-            {
-                temp  = temp + abs(i - n);
-            }
-        }
-        ans.push_back(temp);
-        temp = 0;
+        return *max_element(nums.begin(), nums.end());
     }
-    return ans;    
+    else
+    {
+        return nums[nums.size() - 3];
+    } 
 }
 
 int main() {    
 
-    string boxes;
-    cout<<"Enter the stirng: ";
-    cin>>boxes;
+    vector<int> nums;
 
-    vector<int> ans;
-    ans = minOperations(boxes);
+    vecip(nums);
+    display(nums);
 
-    display(ans);   
+    cout<<thirdMax(nums);
 
     return 0;
 }
