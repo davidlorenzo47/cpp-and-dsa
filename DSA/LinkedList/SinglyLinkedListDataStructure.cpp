@@ -30,17 +30,17 @@ class SinglyLinkedList{
         }
 
         // 1) Check if node exist using key value
-        Node* nodeExists(int k) {   //traversing the linked list
+        Node* nodeExists(int k) {   //traversing the linked list.
             Node* temp = NULL;
 
             Node* ptr = head;
             while (ptr != NULL)
             {
-                if (ptr -> key == k)
+                if (ptr -> key == k) // "->" is used to access members for structure.
                 {
                     temp = ptr;
                 }
-                ptr = ptr -> next;
+                ptr = ptr -> next;  //it is read as "let ptr point on ptr's next".
             }
             return temp;            
         }
@@ -65,7 +65,7 @@ class SinglyLinkedList{
                     {
                         ptr = ptr -> next;
                     }
-                    ptr -> next = n;
+                    ptr -> next = n;    //it is read as "let ptr's next get the value of n".
                     cout<<"Node appended."<<endl;
                 }                
             }
@@ -177,8 +177,8 @@ class SinglyLinkedList{
 
                 while (temp != NULL)
                 {
-                    cout<<"("<<temp->key<<","<<temp->data<<") --> ";
-                    temp = temp -> next;
+                    cout<<"("<<temp->key<<","<<temp->data<<") --> ";    //displaying key and data of the node.
+                    temp = temp -> next;    //moving temp variable to the next node.
                 }
             }
         }

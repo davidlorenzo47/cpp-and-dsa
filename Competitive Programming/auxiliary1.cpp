@@ -28,14 +28,15 @@ void vecip(vector<T> &v) {
 }
 
 int main() {
-    
-    int a = 10;
-    int b = 5;
 
-    a = a + b;
-    b = a - b;
-    a = a - b;
-    cout<<a<<" "<<b;
+    int p = 0;
+    if (p)
+    {
+        cout<<"This works";
+        cout<<p;
+    }
+    
+    
     
 
     return 0;

@@ -27,28 +27,30 @@ void vecip(vector<T> &v) {
     }
 }
 
-int thirdMax(vector<int>& nums) {
-    sort(nums.begin(), nums.end() );
-    nums.erase( unique( nums.begin(), nums.end() ), nums.end() );
-    
-    if (nums.size() == 1 || nums.size() == 2)
+int minOperations(int n) {
+    vector<int> vec;
+    for (int i = 0; i < n; i++)
     {
-        return *max_element(nums.begin(), nums.end());
+        vec.push_back((2*i) + 1);
     }
-    else
+    int target = accumulate(vec.begin(), vec.end(), 0)/n;
+    int ans = 0;
+    for (int i = 0; i < n/2; i++)
     {
-        return nums[nums.size() - 3];
-    } 
+        ans  = ans + (target - vec[i]);
+    }
+    
+    return ans;
+    
 }
 
 int main() {    
 
-    vector<int> nums;
+    int n;
+    cout<<"Enter the value of n: ";
+    cin>>n;
 
-    vecip(nums);
-    display(nums);
-
-    cout<<thirdMax(nums);
+    cout<<minOperations(n);    
 
     return 0;
 }

@@ -59,3 +59,11 @@ unordered map   complexity: O(1)
 */
 
 //functions inside class are known as methods 
+
+/*
+for (int i:nums)
+
+here if nums.size() = 5, and values 10,20,30,40,50 then at the beginning, i = 10, then 20,30,40,50.
+*/
+
+// in class everything by default is private and in structure everything by default is public.
