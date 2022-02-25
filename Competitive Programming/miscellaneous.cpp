@@ -67,3 +67,12 @@ here if nums.size() = 5, and values 10,20,30,40,50 then at the beginning, i = 10
 */
 
 // in class everything by default is private and in structure everything by default is public.
+
+/*To convert string to number.
+string s="abcdef";
+    vector<int> ans;
+    for (int i = 0; i < s.length(); i++)
+    {
+        ans.push_back(s[i]-96); //it converts letters to numbers by subtracting ASCII Values.
+    }
+*/

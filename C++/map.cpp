@@ -13,7 +13,7 @@ int main() {
 
     vecip(vec);
     display(vec); 
-
+   
     map<int, int> mp;
 
     for (auto x:vec)

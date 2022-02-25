@@ -1,6 +1,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+
 template <class T>
 void display(vector<T> &v) {
     for (int i = 0; i < v.size(); i++)
@@ -26,34 +27,36 @@ void vecip(vector<T> &v) {
     }
 }
 
-int lengthOfLastWord(string s) {
-    reverse(s.begin(), s.end());
-    int sp = 0;
-    for (int i = 0; i < s.length(); i++)
-    {
-        int a = 0;
-        while (s[i] != ' ')
+vector<int> numberOfLines(vector<int>& widths, string s) {
+        int length = 0, line = 1;
+        for (int i = 0; i < s.length(); i++)
         {
-            s.erase(a, 1);
-            a++;
+            if (length + widths[s[i]-'a']>100)
+            {
+                length = widths[s[i] - 'a'];
+                line++;
+            }
+            else
+            {
+                length += widths[s[i] - 'a'];
+            }
         }
-        
-        if (s[i] == ' ' && s[i+1] != ' ')
-        {
-            break;
-        }
-        sp++;
-    }
-    return sp;
+        return {line,length};
 }
 
 int main() {    
 
+    vector<int> vec;
+    vecip(vec);
+    display(vec);
     string s;
-    cout<<"Enter the string s:";
+    cout<<"Enter the string s: ";
     cin>>s;
 
-    cout<<"Answer is: "<<lengthOfLastWord(s);
+    vector<int> ans;
+    ans = numberOfLines(vec, s);
+    cout<<"Answer is: ";
+    display(ans);
     
     return 0;
 }

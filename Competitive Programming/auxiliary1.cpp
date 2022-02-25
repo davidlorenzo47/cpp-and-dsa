@@ -27,17 +27,21 @@ void vecip(vector<T> &v) {
     }
 }
 
-int main() {
-
-    int p = 0;
-    if (p)
+int main()
+{
+    string s = "fly me  a     to   the moon  ";
+    int a = 0;
+    if (s[0] == ' ')
     {
-        cout<<"This works";
-        cout<<p;
+        while (s[a] == ' ')
+        {
+            a++;
+        }
     }
-    
-    
+    s.erase(0, a);
+    cout<<s;
     
 
+     
     return 0;
 }

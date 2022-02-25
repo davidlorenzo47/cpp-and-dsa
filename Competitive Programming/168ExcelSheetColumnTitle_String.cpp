@@ -26,34 +26,26 @@ void vecip(vector<T> &v) {
     }
 }
 
-int lengthOfLastWord(string s) {
-    reverse(s.begin(), s.end());
-    int sp = 0;
-    for (int i = 0; i < s.length(); i++)
+string convertToTitle(int columnNumber) {
+    string ans = "";
+    columnNumber--;
+    while (columnNumber >=0)
     {
-        int a = 0;
-        while (s[i] != ' ')
-        {
-            s.erase(a, 1);
-            a++;
-        }
-        
-        if (s[i] == ' ' && s[i+1] != ' ')
-        {
-            break;
-        }
-        sp++;
+        ans += ('A' + columnNumber%26);
+        columnNumber /= 26;
+        columnNumber--;
     }
-    return sp;
+    reverse(ans.begin(), ans.end());
+    return ans;
 }
 
 int main() {    
 
-    string s;
-    cout<<"Enter the string s:";
-    cin>>s;
+    int col;
+    cout<<"Enter the column number: ";
+    cin>>col;
 
-    cout<<"Answer is: "<<lengthOfLastWord(s);
+    cout<<"Answer is: "<<convertToTitle(col);
     
     return 0;
 }

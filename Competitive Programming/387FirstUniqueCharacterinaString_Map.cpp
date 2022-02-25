@@ -26,34 +26,39 @@ void vecip(vector<T> &v) {
     }
 }
 
-int lengthOfLastWord(string s) {
-    reverse(s.begin(), s.end());
-    int sp = 0;
+int firstUniqChar(string s) {
+    
+    unordered_map<char, int> map;
     for (int i = 0; i < s.length(); i++)
     {
-        int a = 0;
-        while (s[i] != ' ')
+        if (map.count(s[i]) == 0)
         {
-            s.erase(a, 1);
-            a++;
+            map[s[i]] = 1;  //adds new value to the map and sets key as one.
         }
-        
-        if (s[i] == ' ' && s[i+1] != ' ')
+        else
         {
-            break;
+            map[s[i]]++;    //increments the key by one.
         }
-        sp++;
     }
-    return sp;
+
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (map[s.at(i)] == 1)
+        {
+            return i;
+        }
+    }
+    
+    return -1;   
 }
 
 int main() {    
 
     string s;
-    cout<<"Enter the string s:";
+    cout<<"Enter the string s: ";
     cin>>s;
 
-    cout<<"Answer is: "<<lengthOfLastWord(s);
+    cout<<"Answer is: "<<firstUniqChar(s);
     
     return 0;
 }
