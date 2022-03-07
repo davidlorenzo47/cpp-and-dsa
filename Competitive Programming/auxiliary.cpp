@@ -13,7 +13,6 @@ void display(vector<T> &v) {
 
 template <class T>
 void vecip(vector<T> &v) {
-
     int size;
     int elements;
     cout<<"Enter the size of the array: ";
@@ -26,34 +25,18 @@ void vecip(vector<T> &v) {
     }
 }
 
-int lengthOfLastWord(string s) {
-    reverse(s.begin(), s.end());
-    int sp = 0;
-    for (int i = 0; i < s.length(); i++)
-    {
-        int a = 0;
-        while (s[i] != ' ')
-        {
-            s.erase(a, 1);
-            a++;
-        }
-        
-        if (s[i] == ' ' && s[i+1] != ' ')
-        {
-            break;
-        }
-        sp++;
-    }
-    return sp;
+bool squareIsWhite(string coordinates) {
+    if (((coordinates[0] - 'a' + 1) + coordinates[1]) % 2 == 0) return false;
+    return true;
 }
 
-int main() {    
-
+int main()
+{
     string s;
-    cout<<"Enter the string s:";
+    cout<<"Enter the string: ";
     cin>>s;
 
-    cout<<"Answer is: "<<lengthOfLastWord(s);
-    
-    return 0;
+    cout<<"Answer is: "<<squareIsWhite(s);
+
+	return 0;
 }

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-
 template <class T>
 void display(vector<T> &v) {
     for (int i = 0; i < v.size(); i++)
@@ -14,7 +13,6 @@ void display(vector<T> &v) {
 
 template <class T>
 void vecip(vector<T> &v) {
-
     int size;
     int elements;
     cout<<"Enter the size of the array: ";
@@ -27,16 +25,18 @@ void vecip(vector<T> &v) {
     }
 }
 
+bool squareIsWhite(string coordinates) {
+    if (((coordinates[0] - 'a' + 1) + coordinates[1]) % 2 == 0) return false;
+    return true; 
+}
+
 int main()
 {
-    for (char i = 'a'; i < 'i'; i++)
-    {
-        for (int j = 1; j < 9; j++)
-        {
-            cout<<"\""<<i<<j<<"\""<<endl;
-        }
-        
-    }
-     
-    return 0;
+    string s;
+    cout<<"Enter the string: ";
+    cin>>s;
+
+    cout<<"Answer is: "<<squareIsWhite(s);
+
+	return 0;
 }

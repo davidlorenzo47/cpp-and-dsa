@@ -73,40 +73,60 @@ ListNode* removeElements(ListNode* head, int val) {
     return temp;
 }
 
-ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-    while (headA != NULL)
+
+ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+    ListNode *temp = new ListNode();
+    ListNode *last = temp;
+
+    while (list1 != NULL && list2 != NULL)
     {
-        while (headB != NULL)
+        if (list1->val < list2->val)
         {
-            if (headA->next == headB->next)
-            {
-                return headA->next;
-            }
-            headB = headB->next;
+            last->next = list1;
+            last = list1;
+            list1 = list1->next;
+            last->next = NULL;
         }
-        
-        headA = headA->next;
+        else
+        {
+            last->next = list2;
+            last = list2;
+            list2 = list2->next;
+            last->next = NULL;
+        }
+        // last = last->next;
     }
-    return 0;
+    if (list1!=NULL)    last->next = list1;
+    if (list2!=NULL)    last->next = list2;
+    
+    return temp->next;
 }
 
 int main()
 {
 
     head = NULL;
-    ListNode *root1 = NULL,*root = NULL;
+    ListNode *root1 = NULL, *root2 = NULL, *root = NULL;
  
     // First linked list
     Insert(&root1, 5);
     Insert(&root1, 20);
     Insert(&root1, 300);
-    Insert(&root1, 300);
     Insert(&root1, 800);
+ 
+    // Second linked list
+    Insert(&root2, 10);
+    Insert(&root2, 70);
+    Insert(&root2, 100);
+    Insert(&root2, 500);
+    cout<<"List1 is: ";
+    Print(root1);
+    cout<<"List2 is: ";
+    Print(root2);
 
-    root = (root1);
-    cout<<"Answer is: ";
-    Print(root);   
-    
+    root = mergeTwoLists(root1, root2);
+    cout<<"After merging the List is: ";
+    Print(root);
 
     return 0;
 }
