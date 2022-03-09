@@ -39,14 +39,16 @@ vector<int> maxSubsequence(vector<int>& nums, int k) {
 int main()
 {
     vector<int> num;
+    int k;
+
     vecip(num);
     display(num);
 
-    int k;
+    cout<<"Enter the int: ";
     cin>>k;
     
     vector<int> ans = maxSubsequence(num, k);
-    display(num);
+    display(ans);
 
 	return 0;
 }

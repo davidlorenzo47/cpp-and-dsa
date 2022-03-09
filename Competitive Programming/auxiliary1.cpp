@@ -29,14 +29,14 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    for (char i = 'a'; i < 'i'; i++)
-    {
-        for (int j = 1; j < 9; j++)
-        {
-            cout<<"\""<<i<<j<<"\""<<endl;
-        }
-        
-    }
+    vector<int> temp;
+    vecip(temp);
+    display(temp);
+    // remove(temp.begin(), temp.end(), 10);
+    // remove(temp.begin(), temp.end(), 20);
+    // remove(temp.begin(), temp.end(), 30);
+    temp.erase(std::remove(temp.begin(), temp.end(), 10), temp.end());
+    display(temp);
      
     return 0;
 }
