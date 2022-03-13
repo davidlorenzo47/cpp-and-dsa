@@ -16,7 +16,7 @@ template <class T>
 void vecip(vector<T> &v) {
 
     int size;
-    int elements;
+    string elements;
     cout<<"Enter the size of the array: ";
     cin>>size;
     for (int i = 0; i < size; i++)
@@ -29,14 +29,8 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    vector<int> temp;
-    vecip(temp);
-    display(temp);
-    // remove(temp.begin(), temp.end(), 10);
-    // remove(temp.begin(), temp.end(), 20);
-    // remove(temp.begin(), temp.end(), 30);
-    temp.erase(std::remove(temp.begin(), temp.end(), 10), temp.end());
-    display(temp);
+    float a = sqrt((-1)^2);
+    cout<<a;
      
     return 0;
 }
