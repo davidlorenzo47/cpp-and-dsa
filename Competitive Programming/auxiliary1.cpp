@@ -29,8 +29,6 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    float a = sqrt((-1)^2);
-    cout<<a;
      
     return 0;
 }
