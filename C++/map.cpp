@@ -12,7 +12,7 @@ int main() {
     vector<int> vec;
 
     vecip(vec);
-    display(vec); 
+    display(vec);
    
     map<int, int> mp;
 
