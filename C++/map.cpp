@@ -27,6 +27,15 @@ int main() {
     }
     */
 
+   /* Finding elements in Map
+   unordered_map<string,int>::iterator it;
+    for (int i = 0; i < words2.size(); i++)
+    {
+        it = ump.find(words2[i]);
+        if (it != ump.end())  ans++;
+    }
+   */
+
     map<string, int> marks;
 
     marks["David"] = 90;
