@@ -31,10 +31,10 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    for (int i = 0; i < 100; i++)
-    {
-        cout<<i<<endl;
-    }
-    
+    vector<int> vec;
+    vec.insert(vec.end(), 5, 1);   
+    display(vec);
+
+
     return 0;
 }

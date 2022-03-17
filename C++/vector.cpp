@@ -34,7 +34,8 @@ int main() {
 
     // vector<int> :: iterator iter = vec.begin(); //will insert at begining
     // vec.insert(iter,7, 0);    //will insert "0" 7 times
-    
+
+    // vec.insert(vec.end(), 5, 1); //inserts "1" 5 times in the vector
     
     for (int i = 0; i < size; i++)
     {
