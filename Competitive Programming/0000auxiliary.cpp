@@ -25,33 +25,47 @@ void vecip(vector<T> &v) {
     }
 }
 
-int countBalls(int lowLimit, int highLimit) {
-    vector<int> ans;
-    ans.insert(ans.end(), highLimit, 0); 
-    for (int i = lowLimit; i <= highLimit; i++)
-    {
-        int temp = i, sum = 0;
-        while (temp > 0)
-        {
-            sum += (temp%10);
-            temp /= 10;
-        }
-        ans[sum]++;
-    }
-    return *max_element(ans.begin(), ans.end());
+bool checkRecord(string s) {
+    // int absent = 0, late = 0;
+    // for (int i = 0; i < s.size(); i++)
+    // {
+    //     if (s[i] == 'L')
+    //     {
+    //         late++;
+    //         if (late > 2)   return false;
+    //     }
+    //     else
+    //     {
+    //         late = 0;
+    //         if (s[i] == 'A')
+    //         {
+    //             absent++;
+    //             if (absent > 1)   return false;
+    //         }            
+    //     }
+    // }
+    // return true;
+
+    // return s.find("LLL")==string::npos && count(s.begin(),s.end(),'A')<=1;
+
+    // int a = 0;
+    //     for(int i = 0; i < s.size(); i++){
+    //         if(i >= 2 && s[i] == 'L' && s[i - 1] == 'L' && s[i - 2] == 'L')
+    //             return false;
+    //         if(s[i] == 'A')
+    //             a++;
+    //     }
+    // return a < 2;
 }
 
 int main()
 {
-    int low,high;
+    string s;
 
-    cout<<"Enter low: ";
-    cin>>low;
+    cout<<"Enter the string s: ";
+    cin>>s;
 
-    cout<<"Enter high: ";
-    cin>>high;
-
-    cout<<"Answer is: "<<countBalls(low, high);
+    cout<<"Answer is: "<<checkRecord(s);
 
 	return 0;
 }
