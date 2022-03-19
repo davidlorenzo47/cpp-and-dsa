@@ -31,10 +31,7 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    vector<int> vec;
-    vec.insert(vec.end(), 5, 1);   
-    display(vec);
-
+    
 
     return 0;
 }
