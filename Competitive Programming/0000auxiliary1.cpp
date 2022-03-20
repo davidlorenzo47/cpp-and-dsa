@@ -31,7 +31,8 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    
+    int a = 4%6;
+    cout<<a;
 
     return 0;
 }
