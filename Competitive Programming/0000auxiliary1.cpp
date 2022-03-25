@@ -27,12 +27,10 @@ void vecip(vector<T> &v) {
     }
 }
 
-
-
 int main()
 {
-    int a = 4%6;
-    cout<<a;
-
+    string s = "abcd efgh";
+    s.pop_back();
+    cout<<s;    
     return 0;
 }
