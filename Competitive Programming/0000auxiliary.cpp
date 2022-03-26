@@ -27,9 +27,25 @@ void vecip(vector<T> &v) {
     }
 }
 
+int uniqueMorseRepresentations(vector<string>& words) {
+    vector<string> code = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};  
+
+    set<string> ans;
+
+    for (auto i:words)
+    {
+        string s = "";
+        for (int j = 0; j < i.size(); j++)
+        {
+            s = code[j-97];
+        }
+        ans.insert(s);
+    }
+    return ans.size();
+}
+
 int main()
 {
-
     
 
 	return 0;

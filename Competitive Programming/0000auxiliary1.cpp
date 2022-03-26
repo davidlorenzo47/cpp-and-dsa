@@ -29,8 +29,7 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    string s = "abcd efgh";
-    s.pop_back();
-    cout<<s;    
+    vector<int> vec(10);
+    display(vec);   
     return 0;
 }
