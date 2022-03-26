@@ -29,7 +29,6 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    vector<int> vec(10);
-    display(vec);   
+    cout<<"Hello world";   
     return 0;
 }
