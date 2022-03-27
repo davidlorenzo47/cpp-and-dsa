@@ -2,6 +2,11 @@
     "files.associations": {
         "iostream": "cpp",
         "vector": "cpp",
-        "new": "cpp"
-    }
+        "new": "cpp",
+        "random": "cpp"
+    },
+    "java.project.sourcePaths": [
+        "Java",
+        "temp"
+    ]
 }
