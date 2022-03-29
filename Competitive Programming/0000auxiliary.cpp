@@ -27,26 +27,57 @@ void vecip(vector<T> &v) {
     }
 }
 
-int uniqueMorseRepresentations(vector<string>& words) {
-    vector<string> code = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};  
-
-    set<string> ans;
-
-    for (auto i:words)
+vector<string> uncommonFromSentences(string s1, string s2) {
+    vector<string> ans;
+    unordered_map<string, int> maap;
+    string s;
+    for (int i = 0; i < s1.length(); i++)
     {
-        string s = "";
-        for (int j = 0; j < i.size(); j++)
+        if (s1[i] == ' ')
         {
-            s = code[j-97];
+            maap[s]++;
+            i++;
+            s.clear();
         }
-        ans.insert(s);
+        s += s1[i];
     }
-    return ans.size();
+    maap[s]++;
+    s.clear();
+    for (int i = 0; i < s2.length(); i++)
+    {
+        if (s2[i] == ' ')
+        {
+            maap[s]++;
+            i++;
+            s.clear();
+        }
+        s += s2[i];
+    }
+    maap[s]++;
+    for (auto i:maap)
+    {
+        if (i.second == 1)
+        {
+            ans.push_back(i.first);
+        }
+    }
+    return ans;     
 }
 
 int main()
 {
-    
+    string s,ss;
 
+    cout<<"Enter first string: ";
+    cin>>s;
+
+    cout<<"Enter second string: ";
+    cin>>ss;
+
+    vector<string> ans = uncommonFromSentences(s, ss);
+
+    cout<<"Answer is: ";
+    display(ans);
+    
 	return 0;
 }
