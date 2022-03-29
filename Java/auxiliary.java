@@ -8,6 +8,7 @@ public class auxiliary {
         a = s.nextInt();
         b = s.nextInt();
         System.out.println(a+b);
+        s.close();
     }
 }
 
