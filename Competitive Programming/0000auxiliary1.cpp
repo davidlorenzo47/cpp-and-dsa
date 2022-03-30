@@ -61,12 +61,13 @@ string freqAlphabets(string s) {
 
 int main()
 {
-    string s;
+    char letter;
+    char num;
+    string temp = "";
 
-    cout<<"Enter the string s: ";
-    cin>>s;
-
-    cout<<"Answer is: "<<freqAlphabets(s);
-
+    cin>>num;
+    num++;
+    temp.push_back(num);
+    cout<<temp;
     return 0;
 }
