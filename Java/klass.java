@@ -16,7 +16,7 @@ class Circle
     }
 }
 
-public class auxiliary {
+public class klass {
     public static void main(String[] args) {
         Circle c = new Circle();
 

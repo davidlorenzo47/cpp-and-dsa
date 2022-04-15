@@ -27,30 +27,17 @@ void vecip(vector<T> &v) {
     }
 }
 
-vector<string> cellsInRange(string s) {
-    vector<string> ans(0);
-    char letter = s[0];
-    char num = s[1];
-    while (letter <= s[3])
-    { 
-        ans.push_back({letter,num});
-        num++;
-        if (num > s[4])
-        {
-            letter++;
-            num = s[1];
-        }  
-    }
-    return ans;
-}
 
 int main()
 {
-    string s;
-    cout<<"Enter the string s: "; // K1:L2
-    cin>>s;
-    vector<string> ans = cellsInRange(s);
-    display(ans);
+    
+    int a,b;
+    cout<<"Enter the nums: ";
+    cin>>a;
+    cin>>b;
+
+    float c = (float)a/b;
+    cout<<c;
 
 	return 0;
 }

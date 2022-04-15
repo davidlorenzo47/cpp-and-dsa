@@ -61,13 +61,8 @@ string freqAlphabets(string s) {
 
 int main()
 {
-    char letter;
-    char num;
-    string temp = "";
+    
+    
 
-    cin>>num;
-    num++;
-    temp.push_back(num);
-    cout<<temp;
     return 0;
 }
