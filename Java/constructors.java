@@ -5,17 +5,17 @@ class Rectangle
     private double length;
     private double breadth;
     
-    public Rectangle()
+    public Rectangle() //this is a constructor
     {
         length = 1;
         breadth = 1;
     }
-    public Rectangle(double l, double b)
+    public Rectangle(double l, double b) //this is a constructor
     {
         length = l;
         breadth = b;
     }
-    public Rectangle(double s)
+    public Rectangle(double s) //this is a constructor
     {
         length = breadth = s;
     }
