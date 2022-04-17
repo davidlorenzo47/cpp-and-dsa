@@ -30,14 +30,9 @@ void vecip(vector<T> &v) {
 
 int main()
 {
-    
-    int a,b;
-    cout<<"Enter the nums: ";
-    cin>>a;
-    cin>>b;
-
-    float c = (float)a/b;
-    cout<<c;
+    int a = 1;
+    int b = 1;
+    cout<<(a^b);    
 
 	return 0;
 }
