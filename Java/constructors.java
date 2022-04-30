@@ -5,17 +5,17 @@ class Rectangle
     private double length;
     private double breadth;
     
-    public Rectangle() //this is a constructor
+    public Rectangle() //this is a non parameterized constructor
     {
         length = 1;
         breadth = 1;
     }
-    public Rectangle(double l, double b) //this is a constructor
+    public Rectangle(double l, double b) //this is a parameterized constructor
     {
         length = l;
         breadth = b;
     }
-    public Rectangle(double s) //this is a constructor
+    public Rectangle(double s) //this is a parameterized constructor
     {
         length = breadth = s;
     }
