@@ -1,19 +1,33 @@
-public class auxiliary {
-
-    public static int[] decode(int[] encoded, int first) {
-        int[] ans = new int[encoded.length + 1];
-        ans[0] = first;
-        for (int i = 1; i < ans.length; i++) {
-            ans[i] = encoded[i-1]^ans[i-1];
-        }
-        return ans;
+class Rectangle{
+    int l, b;
+    Rectangle(){
+        l = b = 1;
     }
-        public static void main(String[] args) {
-        int[] arr = new int[]{6,2,7,3};
-        int[] ans = new int[arr.length + 1];
-        ans = decode(arr,4);
-        for (int i = 0; i < ans.length; i++) {
-            System.out.print(ans[i]+" ");
-        }
+    Rectangle(int x, int y){
+        l = x;
+        b = y;
+    }
+}
+
+class cuboid extends Rectangle{
+    int h;
+    cuboid(){
+        h = 1;
+    }
+    cuboid(int z){
+        h = z;
+    }
+    cuboid(int x, int y, int z){
+        super(x, y);
+        h = z;
+    }
+    int volume(){
+        return l*b*h;
+    }
+}
+public class auxiliary {
+    public static void main(String[] args) {
+        cuboid c = new cuboid(10);
+        System.out.println(c.volume());
     }
 }
