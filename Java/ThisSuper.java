@@ -12,7 +12,7 @@ class Cuboid extends Rectangle{
     int height;
     int x = 10;
     Cuboid(int l, int b, int h){
-        super(l,b); //taking l and b from super class (Rectnagle).
+        super(l,b); //taking l and b from super class (Rectangle).
         height = h;
     }
 
