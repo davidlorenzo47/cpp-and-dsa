@@ -1,38 +1,21 @@
 import java.util.Scanner;
 
-class Solution{
-    public int triangularSum(int[] nums) {
-        int temp = nums.length;
-        while (temp > 1) {
-            for (int i = 0; i < temp-1; i++) {
-                nums[i] = (nums[i] + nums[i+1])%10;
-            }
-            temp--;
-        }
-        return nums[0];
-    }
-}
-
 public class aaaauxiliary {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        int size;
-        System.out.print("Enter the size of the array: ");
-        size = sc.nextInt();
+        int n,k;
 
-        int[] arr = new int[size];
-        int element;
-        for (int i = 0; i < size; i++) {
-            System.out.print("Enter the element: ");
-            element = sc.nextInt();
-            arr[i] = element;
-        }
+        System.out.print("Enter the value of n: ");
+        n = sc.nextInt();
+        
+        System.out.print("Enter the value of k: ");
+        k = sc.nextInt();
         
         sc.close();
 
-        Solution soln = new Solution();
-        System.out.print("Answer is: "+ soln.triangularSum(arr));
+        
+        System.out.print("Answer is: ");
     }
 }
