@@ -15,7 +15,7 @@ class Solution{
     }
 }
 
-public class aaaauxiliary {
+public class ValidParentheses_20_String_Stack_Easy {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

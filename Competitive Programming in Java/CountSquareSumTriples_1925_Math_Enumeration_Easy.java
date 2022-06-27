@@ -21,7 +21,7 @@ class Solution {
     }
 }
 
-public class aaaauxiliary {
+public class CountSquareSumTriples_1925_Math_Enumeration_Easy_1925 {
 
     public static void main(String[] args) {
         
