@@ -1,3 +1,4 @@
+// @FunctionalInterface //This is not compulsory to write, it just shows that the interface is functional interface. 
 interface Lambda {
     public void display(); // by default, methods in interface are default and abstract.
 }
