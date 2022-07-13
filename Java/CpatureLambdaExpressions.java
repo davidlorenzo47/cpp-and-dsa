@@ -7,7 +7,7 @@ class UseLambda
 {
     public void callLambda(MyLambda ml) //Lambda Expression can be passed as a parameter.
     {
-        ml.display(); 
+        ml.display();
     }
 }
 
