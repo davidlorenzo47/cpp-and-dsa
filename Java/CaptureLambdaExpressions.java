@@ -41,5 +41,4 @@ public class CaptureLambdaExpressions {
         Demo d=new Demo();
         d.method1();
     }
-    
 }
