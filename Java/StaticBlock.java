@@ -26,6 +26,7 @@ public class StaticBlock {
         //Test t=new Test();
         System.out.println("Main");
         Test t=new Test();
+        System.out.println(t.hashCode());
     }
     
     /*static
