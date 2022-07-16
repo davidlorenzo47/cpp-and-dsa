@@ -3,7 +3,7 @@ class MultiThreading extends Thread {
     public void run() {
         int i = 1;
         while(true){
-            System.out.print(" Hello ");
+            System.out.print(" Hello:"+i+" ");
             i++;
         }
     }
@@ -12,7 +12,7 @@ class MultiThreading extends Thread {
         t.start();
         int i = 1;
         while (true) {
-            System.out.print("World");
+            System.out.print("World:"+i+" ");
             i++;
         }
     }

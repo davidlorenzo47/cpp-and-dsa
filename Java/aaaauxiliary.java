@@ -7,7 +7,7 @@ public class aaaauxiliary {
         
         Scanner sc = new Scanner(System.in);
         
-        int a;
+        // int a;
         // a = sc.nextInt();
         sc.close();
 
