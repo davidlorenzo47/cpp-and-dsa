@@ -20,7 +20,7 @@ public class StaticPractice {
         
         Test t1=new Test();
         t1.show();
-        
+
         t1.x=30;
         t1.y=50;
         
