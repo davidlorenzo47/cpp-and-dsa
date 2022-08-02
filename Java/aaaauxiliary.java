@@ -7,14 +7,28 @@ public class aaaauxiliary {
         
         Scanner sc = new Scanner(System.in);
         
-        // int a;
-        // a = sc.nextInt();
+        int gap, hh, mm, ans = 0;
+        boolean flag = false;
+        gap = sc.nextInt();
+        hh = sc.nextInt();
+        mm = sc.nextInt();
         sc.close();
 
-        for (int i = 1; i < 101; i++) {
-            System.out.println(i);
-        }
-
-        
+        while (!flag) {
+            if (hh % 10 == 7 || hh / 10 == 7 || mm % 10 == 7 || mm / 10 == 7) {
+                System.out.println(ans);
+                flag = true;
+            } else if (mm-gap > 0){
+                mm -= gap;
+                ans++;
+                System.out.println("Minute is: "+mm);
+            }
+            else {
+                mm -= gap;
+                hh--;
+                ans++;
+                System.out.println("Minute is: "+mm);
+            }
+        } 
     }
 }
