@@ -23,8 +23,6 @@ public class ioPrintStream
         ps.println(s.rollno);
         ps.println(s.name);
         ps.println(s.dept);
-
-        System.out.println(s.rollno);
         
         ps.close();
         fos.close();
