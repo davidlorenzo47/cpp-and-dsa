@@ -24,10 +24,12 @@ public class aaaauxiliary {
                 System.out.println("Minute is: "+mm);
             }
             else {
-                mm -= gap;
+
+                mm -= gap+60;
                 hh--;
+                mm *= -1;
                 ans++;
-                System.out.println("Minute is: "+mm);
+                System.out.println("Minute is: "+mm+"Second Loop");
             }
         } 
     }
