@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-
-public class aaaauxiliary {
+public class A916_900_JamieandAlarmSnooze_bruteforce_implementation_math_Round221 {
 
     public static void main(String[] args) {
         

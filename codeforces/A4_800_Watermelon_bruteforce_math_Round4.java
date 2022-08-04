@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class A_Watermelon_bruteforce_math_800 {
+public class A4_800_Watermelon_bruteforce_math_Round4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         

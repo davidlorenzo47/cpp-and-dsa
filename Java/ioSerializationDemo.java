@@ -1,6 +1,6 @@
-import java.io.DataInputStream;
+// import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.FileInputStream;
+// import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class ioSerializationDemo {
@@ -29,7 +29,7 @@ public class ioSerializationDemo {
         //     System.out.println(dis.readFloat());
         // }
 
-        // dis.close();
+        // dis.close()
         // fis.close();
     }
 }

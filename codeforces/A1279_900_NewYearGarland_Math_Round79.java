@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class A1279_NewYearGarland_math_Round79 {
+public class A1279_900_NewYearGarland_Math_Round79 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

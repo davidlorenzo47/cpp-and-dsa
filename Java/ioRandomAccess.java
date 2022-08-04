@@ -20,8 +20,7 @@ public class ioRandomAccess
         rf.seek(rf.getFilePointer()+2);
         System.out.println((char)rf.read());
 
-        
-
+        rf.close();
        
     }   
 }

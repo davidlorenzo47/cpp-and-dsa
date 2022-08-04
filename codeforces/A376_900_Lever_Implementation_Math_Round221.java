@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class A376_Lever_Implementation_Math_Round221 {
+public class A376_900_Lever_Implementation_Math_Round221 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
