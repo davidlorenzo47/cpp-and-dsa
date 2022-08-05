@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch A1016_900_DeathNote_greedy_implementation_math_Round48",
+            "request": "launch",
+            "mainClass": "A1016_900_DeathNote_greedy_implementation_math_Round48",
+            "projectName": "cpp-java-and-dsa_b4129474"
+        },
+        {
+            "type": "java",
             "name": "Launch auxiliary",
             "request": "launch",
             "mainClass": "auxiliary",
