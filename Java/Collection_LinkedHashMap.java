@@ -10,7 +10,7 @@ public class Collection_LinkedHashMap {
             }
         };
         //here first initial capacity is mentioned, then loading factor, then accessOrder.
-        //if accessOrder is true then the order in which the keys are accessed is mentioned.
+        //if accessOrder is true then the order in which the keys are accessed is mentioned and can be used as cache memory.
 
         //here order of the keys in which they were inserted is maintained.
         lhm.put(1, "A");
