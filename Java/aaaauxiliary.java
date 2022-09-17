@@ -5,7 +5,8 @@ public class aaaauxiliary {
 
     public static void main(String[] args) {
 
-        int i = 1;
-        System.out.println(i%3);
+        String s = "Timberleaf Apartments 2147 Newhall St Apt 513 Santa Clara CA 95050-5894";
+
+        System.out.print(s.toUpperCase());
     }
 }
