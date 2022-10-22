@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.*;
 
-public class ReverseWordsinaStringIII_557_TwoPointers_String_Easy {
+public class aaaauxiliary {
 
     public static String reverseWords(String s) {
         String ans = "";

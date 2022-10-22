@@ -9,14 +9,13 @@ import java.lang.*;
 
 public class aaaauxiliary {
 
-    public static String reverseWords(String s) {
-        String ans = "";
+    public static int titleToNumber(String columnTitle) {
 
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == ' ') {
-                ans += ' ';
-            }
-            else ans = s.charAt(i) + ans;
+        int ans = 0, temp = 0, size = columnTitle.length();
+        for (int i = 0; i < size; i++) {
+            temp = (columnTitle.charAt(i) - 64) + (size-i-1)*26;
+            System.out.print(temp+" ");
+            ans += temp;
         }
         return ans;
     }
@@ -29,7 +28,7 @@ public class aaaauxiliary {
         // int size = Integer.parseInt(br.readLine());
         String s = br.readLine();
         
-        System.out.println(reverseWords(s));
+        System.out.println(titleToNumber(s));
         
     }
 }

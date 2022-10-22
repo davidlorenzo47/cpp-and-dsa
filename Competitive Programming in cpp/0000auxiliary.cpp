@@ -28,22 +28,10 @@ void vecip(vector<T> &v) {
     }
 }
 
-int sumBase(int n, int k) {
-    vector<int> vec;
-    vec.insert(vec.end(), 5, 1);
-    while(n >= k) {
-        int temp = n%k;
-        vec.push_back(temp);
-        n /= k;
-    }
-    return accumulate(vec.begin(), vec.end(), 0);
-}
 
 int main()
-{ 
-
-    int n = 34, k = 6;
-    cout<<"Answer is: "<<sumBase(n, k);
+{
+    
 
 	return 0;
 }
