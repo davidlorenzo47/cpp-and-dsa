@@ -28,36 +28,43 @@ void vecip(vector<T> &v) {
     }
 }
 
-int arraySign(vector<int>& nums) {
-    int cnt = 0;
-    for (int i = 0; i < nums.size(); i++)
+vector<int> twoSum(vector<int>& nums, int target) {
+    int i=0, j=0;
+    while (i < nums.size())
     {
-        if (nums[i] == 0)
+        j = 0;
+        while (j < nums.size())
         {
-            return 0;
+            if (i!=j)
+            {
+                if ((nums[i] + nums[j]) == target)
+                {    
+                    nums.clear();
+                    nums.push_back(i);
+                    nums.push_back(j);
+                    break;
+                }
+            }
+            j++;
         }
-        if (nums[i] < 0)
-        {
-            cnt++;
-        }
+        i++;        
     }
-    if (cnt % 2 == 0)
-    {
-        return 1;
+        return nums;
     }
-    else
-    {
-        return -1;
-    }
-}
 
 int main()
 {
     vector<int> vec;
-    vecip(vec);
-    display(vec);
+    int target;
 
-    cout<<" Answer is: "<<arraySign(vec);    
+    vecip(vec);
+
+    cin>>target;
+
+    vector<int> ans;
+    ans = twoSum(vec, target);
+
+    display(ans);   
 
 	return 0;
 }
