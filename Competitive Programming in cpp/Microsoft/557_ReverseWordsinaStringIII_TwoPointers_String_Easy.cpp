@@ -28,25 +28,29 @@ void vecip(vector<T> &v) {
     }
 }
 
-int maxSubArray(vector<int>& nums) {
-    int ans = INT_MIN, temp = 0;
-    for (int i = 0; i < nums.size(); i++)
+string reverseWords(string s) {
+    string temp = "", ans = "";
+    for (int i = 0; i < s.length(); i++)
     {
-        temp += nums[i];
-        ans = max(ans, temp);
-
-        if (temp < 0) temp = 0;        
+        temp = s[i] + temp;
+        if (s[i] == ' ')
+        {
+            temp.erase(0,1);    //0 is position, and 1 is character
+            temp += " ";
+            ans += temp;
+            temp = "";
+        }
     }
+    ans+= temp;
     return ans;
 }
 
 int main()
 {
-    vector<int> vec;
+    string s;
 
-    vecip(vec);
-
-    cout<<maxSubArray(vec);
+    getline(cin, s);
+    cout<<reverseWords(s);
 
 	return 0;
 }
