@@ -12,7 +12,7 @@ void Insert(int x) {
     Node* temp = (Node*)malloc(sizeof(struct Node));
     temp -> data = x;
     temp -> next = head ;
-    //if(head != NULL) temp->next = head;
+    if(head != NULL) temp->next = head;
     head = temp;
 }
 void Print() {  //if Print(Node* head) then head is local variable for Print
