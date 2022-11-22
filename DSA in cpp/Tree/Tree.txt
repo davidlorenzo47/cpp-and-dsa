@@ -1,17 +1,12 @@
-Algorithm Inorder(tree):
-1. Traverse the left subtree, i.e., call Inorder(left->subtree)
-2. Visit the root.
-3. Traverse the right subtree, i.e., call Inorder(right->subtree)
+preorder: parent => left => right
+inorder: left => parent => right
+postorder: left => right => parent
 
-Algorithm Preorder(tree):
-1. Visit the root.
-2. Traverse the left subtree, i.e., call Preorder(left->subtree)
-3. Traverse the right subtree, i.e., call Preorder(right->subtree)
-
-Algorithm Postorder(tree):
-1. Traverse the left subtree, i.e., call Postorder(left->subtree)
-2. Traverse the right subtree, i.e., call Postorder(right->subtree)
-3. Visit the root
+Hint to Remember: 
+  IN means root is in middle: inorder: left => root => right 
+  PRE means root is at front: preorder: root => left => right
+  POST means root is at the end: postorder: left => right => root
+Always left comes first than right
 
 There are three ways to read a binary tree:
 1. Prefix: Root node, then left child, then right child
