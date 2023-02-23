@@ -31,6 +31,12 @@ void vecip(vector<T> &v) {
 
 int main()
 {
+    vector<int> vec;
+    vecip(vec);
+
+    int sum = 0;
+    for (int i: vec) sum += i;
+    cout<<sum;
     
 
 	return 0;
