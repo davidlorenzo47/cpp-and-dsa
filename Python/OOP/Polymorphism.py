@@ -1,0 +1,1 @@
+#Polymorphism refers to use of single type entity to represent different types in different scenarios. 
