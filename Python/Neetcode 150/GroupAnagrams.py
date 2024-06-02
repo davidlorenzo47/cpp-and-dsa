@@ -6,7 +6,7 @@ def ip(arr):
     for i in arr:
         sorted_item = tuple(sorted(i))
         my_dict[sorted_item].append(i)
-
+    print(my_dict)
     for i in my_dict.values():
         results.append(i)
 

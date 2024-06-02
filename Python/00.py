@@ -1,10 +1,10 @@
-import matplotlib.pyplot as plt
+def findClosestNumber(nums):
+    n = sorted(nums)
+    min = n[1]
+    for i in range (1, len(n)):
+        if (abs(n[i]) < abs(min)):
+            min = n[i]
+    return min
 
-# Create some data
-data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# Plot the histogram
-plt.hist(data)
-
-# Show the plot
-plt.show()
+l = [2,-1,1]
+print(findClosestNumber(l))
