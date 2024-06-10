@@ -298,7 +298,100 @@ console.log(`Random Number between 1-10: ${Math.ceil(Math.random()*10)}`);
 
 
 // **********************String Methods***************************
+let sentence = "The quick brown fox jumps over the lazy dog!"
 
+console.log(sentence.includes('fox'));
+console.log(sentence[5]);
+console.log(sentence.startsWith('T'));
+console.log(sentence.replace('T', 'ttttt'));
+console.log(sentence.split(' '));
+console.log(sentence.toUpperCase());
+
+const onlyWords = sentence.split(" "); 
+console.log(onlyWords.join('-'));
+
+
+// **********************Date***************************
+let curr_date = new Date();
+console.log(curr_date);
+
+// **********************Arrays***************************
+const arrOfNums = [51, 51, 874, 2, 653, 45, 654, 20];
+
+arrOfNums.push(10000)
+console.log(`Inserting at End: ${arrOfNums}`);
+
+console.log(`Last element removed is: ${arrOfNums.pop()}`)
+
+console.log(`First element remove is: ${arrOfNums.shift()}`)
+
+arrOfNums.unshift(1);
+console.log(`Inserting at Start: ${arrOfNums}`);
+
+arrOfNums.splice(1, 0, 50);
+console.log(`Inserting in Between: ${arrOfNums}`);
+
+console.log(`Using Slice: ${arrOfNums.slice(0,5)}`);
+
+console.log(`Finding Index: ${arrOfNums.indexOf(20)}`);
+
+console.log(`Checking if element is present: ${arrOfNums.includes(2)}`);
+
+const half_arr = [-34, -443, -6845, -514, -51, -645, -748];
+console.log(`Combined Array: ${arrOfNums.concat(half_arr)}`);
+
+const usingSpread = [...arrOfNums, ...half_arr];
+console.log(`Combined array using spread operator: ${usingSpread}`);
+
+console.log(`Sorted array is: ${usingSpread.sort()}`)
+
+console.log(`Emptied array: ${arrOfNums.length = 0}`)
+
+// Using Reduce
+const sumOfAllElements = usingSpread.reduce( (acc, currVal) => {
+    return acc + currVal;
+})
+console.log(`Sum of Elements using Reduce${sumOfAllElements}`);
+// **********************Arrow Functions***************************
+const arrFunc = (num1, num2) => {
+    return num1 + num2;
+}
+
+const same_arrFunc = (num1, num2) => num1 + num2;
+
+// **********************Getters and Setters***************************
+const gAndS = {
+    name_person: "ABC",
+    age: 54,
+    get details() {
+        return `Name is: ${this.name_person} and Age is: ${this.age}.`
+    },
+    set details(value) {
+        this.name_person = value
+        // return `Name is: ${name} and Age is: ${age}.`
+    }
+}
+gAndS.details = "XYZ";
+console.log(gAndS.details);
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
+// **********************Variables***************************
 // **********************Variables***************************
 // **********************Variables***************************
 
